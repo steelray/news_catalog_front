@@ -1,0 +1,7 @@
+<app-layout pageTitle="Все категорий">
+    <p-tree 
+        [value]="categories$ | async" 
+        selectionMode="single"
+        [(selection)]="selectedCategory"
+        (onNodeSelect)="nodeSelect($event)"></p-tree>
+</app-layout>

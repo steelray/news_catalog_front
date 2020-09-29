@@ -1,0 +1,10 @@
+<header class="container">
+    <button type="button" pButton icon="pi pi-bars" (click)="menu.toggle($event)"></button>
+    <h1 *ngIf="pageTitle">{{pageTitle}}</h1>
+</header>
+<main>
+    <div class="container">
+        <ng-content></ng-content>
+    </div>
+</main>
+<p-menu #menu [popup]="true" [model]="items"></p-menu>
